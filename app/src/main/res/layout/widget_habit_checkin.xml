@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_surface"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- 顶部栏：当前习惯名称 + 切换习惯按钮 + 桌面一键打卡按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWidgetHabitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍵 每日戒糖"
+                android:textColor="#0F172A"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWidgetProgressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周期进度 0/7 天 · 连续 0 天"
+                android:textColor="#64748B"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnWidgetSwitchHabit"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_day_neutral"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="6dp"
+            android:text="切换 ↻"
+            android:textColor="#334155"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnWidgetCheckIn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_widget_btn_active"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="打卡今日"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 本周 7 天进度展示栏（周一 ~ 周日） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 周一 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="一" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay1Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周二 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="二" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay2Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周三 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="三" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay3Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周四 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="四" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay4Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周五 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="五" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay5Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周六 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="六" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay6Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 周日 -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日" android:textColor="#64748B" android:textSize="10sp" android:layout_marginBottom="3dp" />
+            <TextView android:id="@+id/tvWidgetDay7Status" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_day_neutral" android:gravity="center" android:text="·" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

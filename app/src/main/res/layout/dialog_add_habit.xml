@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="习惯名称"
+        android:textColor="#334155"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etHabitName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如：每日戒糖、早睡打卡、晨跑3公里"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图标符号 (Emoji)"
+        android:textColor="#334155"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etHabitEmoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如：🍵 🥗 🏃 🌙 📚"
+        android:inputType="text"
+        android:text="🍵"
+        android:textSize="15sp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="挑战目标天数（如一周7天）"
+        android:textColor="#334155"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etTargetDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入目标天数"
+        android:inputType="number"
+        android:text="7"
+        android:textSize="15sp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPreset7"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="7天(一周)"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnPreset14"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="14天"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnPreset21"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="21天"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnPreset30"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="30天"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</LinearLayout>

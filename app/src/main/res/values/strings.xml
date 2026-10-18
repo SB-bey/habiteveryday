@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">自律打卡</string>
+    <string name="widget_name">习惯打卡小组件</string>
+    <string name="widget_description">在手机桌面查看本周7天打卡进度并一键完成今日打卡</string>
+</resources>
